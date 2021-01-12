@@ -3,7 +3,8 @@ class Character{
 
 	public:
 	Character();
-	//void Accelerate();
+	Character(float speed, float max_speed);
+	void Accelerate();
 	//void Break();
 	//inline const float speed();
 	~Character();

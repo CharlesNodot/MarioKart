@@ -5,6 +5,12 @@ Character::Character(){
 	max_speed_ = 10;
 };
 
+Character::Character(float speed, float max_speed){
+	speed_ = speed;
+	max_speed_ = max_speed;
+};
+
+
 float Character::get_speed(){
 	return speed_;
 };
@@ -19,15 +25,16 @@ Character::~Character(){
 };
 
 
-/*
+
 void Character::Accelerate(){
 	if (speed_ + 1 <= max_speed_){ 
 	speed_ = speed_ +1;
-	} else{
-	std::cout<<"Trop de vitesse...."<<std::endl;
+	}
 
 };
 
+
+/*
 void Character::Break(){
 	if (speed_ - 1 <= 0){
 	speed_ = 0;

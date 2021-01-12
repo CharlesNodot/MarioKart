@@ -15,5 +15,13 @@ TEST(GTestTest,DefaultConstructor){
 }
 
 
-TEST(
+TEST(GTestTest, ParametrabelConstructor){
+	Character* Luigi = new Character(9.5,15.0);
+	EXPECT_EQ(9.5, Luigi -> get_speed());
+	EXPECT_EQ(15.0, Luigi -> get_max_speed());
+	delete Luigi;
+}
+
+
+
 
