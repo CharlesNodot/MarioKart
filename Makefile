@@ -6,5 +6,10 @@ run_tests: google_tests.o
 google_tests.o: google_tests.cpp 
 	g++ $(CXXFLAGS) -c google_tests.cpp -o google_tests.o -Igoogletest-release-1.10.0/googletest/include/ -std=c++11 
 
+Character.o : Character.cpp 
+	g++ $(CXXFLAGS) -o Character.o Character.cpp 
+
+
+
 clean:
 	rm google_tests.o run_tests 
