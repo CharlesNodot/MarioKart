@@ -6,7 +6,7 @@ class Character{
 	Character(float speed, float max_speed);
 	void Accelerate();
 	void Break();
-	//inline const float speed();
+	inline float speed() const {return speed_;};
 	~Character();
 	float get_speed();
 	float get_max_speed();

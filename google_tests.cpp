@@ -42,3 +42,10 @@ TEST(GTestTest, Break){
 	delete Waluigi;
 }
 
+TEST(GTestTest, SpeedInline){
+	Character* Waluigi = new Character();
+	EXPECT_EQ(Waluigi -> speed(), 0);
+	delete Waluigi;
+}
+
+
