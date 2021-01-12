@@ -8,7 +8,9 @@ Character::Character(){
 Character::Character(float speed, float max_speed){
 	speed_ = speed;
 	max_speed_ = max_speed;
+	
 };
+
 
 
 float Character::get_speed(){
@@ -42,10 +44,7 @@ void Character::Break(){
 	}
 };	
 
-//Character::inline const float speed(){
-//	const float speed = speed_;
-//	return speed_;
-//	};	
+	
 
 
 
