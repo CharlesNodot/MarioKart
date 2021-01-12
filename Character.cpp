@@ -34,15 +34,13 @@ void Character::Accelerate(){
 };
 
 
-/*
 void Character::Break(){
 	if (speed_ - 1 <= 0){
 	speed_ = 0;
-	std::cout<<"Vitesse zéro...."<<std::endl;
 	} else {
 	speed_ = speed_ - 1;
 	}
-};*/	
+};	
 
 //Character::inline const float speed(){
 //	const float speed = speed_;

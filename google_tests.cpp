@@ -32,4 +32,13 @@ TEST(GTestTest, Accelerate){
 	delete Waluigi;
 }
 
+TEST(GTestTest, Break){
+	Character* Waluigi = new Character(1,2);
+	Waluigi -> Break();
+	EXPECT_EQ(0, Waluigi -> get_speed());
+//speed 0 reached, normally it shouldn't be possible to decelerate anymore.
+	Waluigi -> Break();
+	EXPECT_EQ(Waluigi -> get_speed(), 0);
+	delete Waluigi;
+}
 
