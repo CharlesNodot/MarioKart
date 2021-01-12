@@ -22,6 +22,14 @@ TEST(GTestTest, ParametrabelConstructor){
 	delete Luigi;
 }
 
-
+TEST(GTestTest, Accelerate){
+	Character* Waluigi = new Character(9,10);
+	Waluigi -> Accelerate();
+	EXPECT_EQ(10, Waluigi -> get_speed());
+//max speed reached, normally it shouldn't be possible to accelerate anymore.
+	Waluigi -> Accelerate();
+	EXPECT_EQ(Waluigi -> get_speed(), Waluigi -> get_max_speed());
+	delete Waluigi;
+}
 
 
