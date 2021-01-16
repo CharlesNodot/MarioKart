@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 #include <string>
 #include "Mario.h"
+#include "Yoshi.h"
 TEST(GTestTests,Dummytest){
 
 
@@ -74,7 +75,25 @@ TEST(GTestTest,MarioWhatAmI){
 }
 
 
+TEST(GTestTest,YoshiDefConstructor){
+	Yoshi* y1 = new Yoshi();
+	EXPECT_EQ(y1 -> speed(),0);
+	EXPECT_EQ(y1 -> get_max_speed(),10);
+	delete y1;
+}
 
+TEST(GTestTest,YoshiParamConstructor){
+	Yoshi* y1 = new Yoshi(10,100);
+	EXPECT_EQ(y1 -> speed(),10);
+	EXPECT_EQ(y1 -> get_max_speed(),100);
+	delete y1;
+}
+
+TEST(GTestTest,YoshiWhatAmI){
+	Yoshi* y1 = new Yoshi();
+	EXPECT_EQ(y1 -> WhatAmI(),"Yoshi");
+	delete y1;
+}
 
 
 
