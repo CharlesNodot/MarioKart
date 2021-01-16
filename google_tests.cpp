@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
-#include "Character.cpp"
-
+#include <string>
+#include "Mario.h"
 TEST(GTestTests,Dummytest){
 
 
@@ -51,6 +51,29 @@ TEST(GTestTest, SpeedInline){
 }
 
 */
+
+
+TEST(GTestTest,MarioDefConstructor){
+	Mario* p1 = new Mario();
+	EXPECT_EQ(p1 -> speed(),0);
+	EXPECT_EQ(p1 -> get_max_speed(),10);
+	delete p1;
+}
+
+TEST(GTestTest,MarioParamConstructor){
+	Mario* p1 = new Mario(10,100);
+	EXPECT_EQ(p1 -> speed(),10);
+	EXPECT_EQ(p1 -> get_max_speed(),100);
+	delete p1;
+}
+
+TEST(GTestTest,MarioWhatAmI){
+	Mario* p1 = new Mario();
+	EXPECT_EQ(p1 -> WhatAmI(),"Mario");
+	delete p1;
+}
+
+
 
 
 
