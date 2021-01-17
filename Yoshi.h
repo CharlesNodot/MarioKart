@@ -11,11 +11,11 @@ class Yoshi: public Character{
 	std::string WhatAmI() const override;	
 	~Yoshi();
 	void Accelerate();
-	int* crests_; 	
+	int* get_crests();	
 	protected:
 	float speed_;
 	float max_speed_;
-	
+	int* crests_; 
 
 };
 

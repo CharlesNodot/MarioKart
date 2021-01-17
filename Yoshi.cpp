@@ -1,8 +1,9 @@
 #include"Yoshi.h"
 #include<iostream>
-
+#include<ctime>
 Yoshi::Yoshi():Character(){
-	crests_ = new int(5);
+	srand((unsigned) time(0));
+	crests_ = new int((rand() % 100)+1);
 	
 };
 
@@ -12,6 +13,7 @@ Yoshi::Yoshi(float speed, float max_speed):Character(speed,max_speed){
 };
 
 Yoshi::~Yoshi(){
+	delete crests_;
 };
 
 void Yoshi::Accelerate(){
@@ -28,3 +30,8 @@ void Yoshi::Accelerate(){
 std::string Yoshi::WhatAmI() const{
 return to_string(*crests_)+" crested Yoshi";
 };
+
+
+int* Yoshi::get_crests(){
+	return crests_;
+}

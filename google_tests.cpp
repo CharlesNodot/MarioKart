@@ -126,22 +126,23 @@ TEST(GTestTest,AccelerationComparisonTest){
         	delete x;
 }
 
-
-TEST(GTestTest, CrestsTest){
+//Works no more since crests_ is random
+/*TEST(GTestTest, CrestsTest){
 	Yoshi* y1 = new Yoshi();
 	int* val = new int(5);
 	
-	//cout << *(y1 -> crests_) << endl;
+	//cout << *(y1 -> get_crests()) << endl;
 	EXPECT_EQ(5, *val);
 	delete y1;
-}
+}*/
 
 
 TEST(GTestTest, WhatAmICrestsTest){
 	Yoshi* y1 = new Yoshi();
-	EXPECT_EQ(y1 -> WhatAmI(),"5 crested Yoshi");
+	EXPECT_EQ(y1 -> WhatAmI(),to_string(*(y1 -> get_crests()))+" crested Yoshi");
 	delete y1;
 }
 
+// valgrind --leak-check=full          --show-leak-kinds=all          --track-origins=yes          --verbose          --log-file=valgrind-out.txt          ./run_tests 
 
 
