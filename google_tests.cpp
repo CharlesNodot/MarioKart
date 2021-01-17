@@ -68,6 +68,15 @@ TEST(GTestTest,MarioParamConstructor){
 	delete p1;
 }
 
+TEST(GTestTest,MarioAccelerate){
+	Mario* p1 = new Mario();
+	p1 -> Accelerate();
+	EXPECT_EQ(p1 -> speed(),1);
+	delete p1;
+}
+
+
+
 TEST(GTestTest,MarioWhatAmI){
 	Mario* p1 = new Mario();
 	EXPECT_EQ(p1 -> WhatAmI(),"Mario");
@@ -96,6 +105,12 @@ TEST(GTestTest,YoshiWhatAmI){
 }
 
 
+TEST(GTestTest,YoshiAccelerate){
+	Yoshi* y1 = new Yoshi(2,10);
+	y1 -> Accelerate();
+	EXPECT_EQ(y1 -> speed(),3.5);
+	delete y1;
+}
 
 
 
