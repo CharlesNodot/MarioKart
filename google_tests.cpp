@@ -2,6 +2,7 @@
 #include <string>
 #include "Mario.h"
 #include "Yoshi.h"
+using namespace std;
 TEST(GTestTests,Dummytest){
 
 
@@ -111,6 +112,25 @@ TEST(GTestTest,YoshiAccelerate){
 	EXPECT_EQ(y1 -> speed(),3.5);
 	delete y1;
 }
+
+TEST(GTestTest,AccelerationComparisonTest){
+	Yoshi* y1 = new Yoshi(0,10000);
+	Mario* p1 = new Mario(0,10000);
+	std::vector<Character*> vect{y1 , p1};
+	for(int i=0;i<50;i=i+1) 	
+		for (Character* x : vect) 
+        		x -> Accelerate();
+	 
+	EXPECT_GE(vect[0] -> speed(),vect[1] -> speed());
+	for (Character* x : vect) 
+        	delete x;
+}
+
+
+
+
+
+
 
 
 
