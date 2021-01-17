@@ -2,10 +2,13 @@
 
 
 Yoshi::Yoshi():Character(){
+	crests_ = new int(5);
+	
 };
 
 
 Yoshi::Yoshi(float speed, float max_speed):Character(speed,max_speed){
+	crests_ = new int(5);
 };
 
 Yoshi::~Yoshi(){

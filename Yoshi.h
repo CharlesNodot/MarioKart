@@ -10,11 +10,12 @@ class Yoshi: public Character{
 	Yoshi(float speed, float max_speed);
 	std::string WhatAmI() const override;	
 	~Yoshi();
-	void Accelerate();	
+	void Accelerate();
+	int* crests_; 	
 	protected:
 	float speed_;
 	float max_speed_;
-
+	
 
 };
 

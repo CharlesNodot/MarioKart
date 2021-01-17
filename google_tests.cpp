@@ -127,9 +127,14 @@ TEST(GTestTest,AccelerationComparisonTest){
 }
 
 
-
-
-
+TEST(GTestTest, CrestsTest){
+	Yoshi* y1 = new Yoshi();
+	int* val = new int(5);
+	
+	cout << *(y1 -> crests_) << endl;
+	EXPECT_EQ(5, *val);
+	delete y1;
+}
 
 
 
