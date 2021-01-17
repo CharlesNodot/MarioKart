@@ -17,7 +17,7 @@ Yoshi::~Yoshi(){
 };
 
 void Yoshi::Accelerate(){
-	if (speed_ + 1.5 <= max_speed_){ 
+	if (speed_ + 1.5 < max_speed_){ 
 	speed_ = speed_ +1.5;
 	}
 	else {
@@ -35,3 +35,5 @@ return to_string(*crests_)+" crested Yoshi";
 int* Yoshi::get_crests(){
 	return crests_;
 }
+
+

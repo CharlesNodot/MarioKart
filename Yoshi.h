@@ -13,8 +13,9 @@ class Yoshi: public Character{
 	void Accelerate();
 	int* get_crests();	
 	protected:
-	float speed_;
-	float max_speed_;
+//pour une raison que j'aimerais éclaircir, la déclaration de ces deux attributs empêchent leur accès à la méthode Accelerate() des classes Character et Yoshi.
+	//float speed_;
+	//float max_speed_;
 	int* crests_; 
 
 };
