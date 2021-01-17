@@ -98,13 +98,13 @@ TEST(GTestTest,YoshiParamConstructor){
 	EXPECT_EQ(y1 -> get_max_speed(),100);
 	delete y1;
 }
-
+/*
 TEST(GTestTest,YoshiWhatAmI){
 	Yoshi* y1 = new Yoshi();
 	EXPECT_EQ(y1 -> WhatAmI(),"Yoshi");
 	delete y1;
 }
-
+*/
 
 TEST(GTestTest,YoshiAccelerate){
 	Yoshi* y1 = new Yoshi(2,10);
@@ -131,13 +131,17 @@ TEST(GTestTest, CrestsTest){
 	Yoshi* y1 = new Yoshi();
 	int* val = new int(5);
 	
-	cout << *(y1 -> crests_) << endl;
+	//cout << *(y1 -> crests_) << endl;
 	EXPECT_EQ(5, *val);
 	delete y1;
 }
 
 
-
+TEST(GTestTest, WhatAmICrestsTest){
+	Yoshi* y1 = new Yoshi();
+	EXPECT_EQ(y1 -> WhatAmI(),"5 crested Yoshi");
+	delete y1;
+}
 
 
 

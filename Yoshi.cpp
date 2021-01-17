@@ -1,5 +1,5 @@
 #include"Yoshi.h"
-
+#include<iostream>
 
 Yoshi::Yoshi():Character(){
 	crests_ = new int(5);
@@ -26,5 +26,5 @@ void Yoshi::Accelerate(){
 
 
 std::string Yoshi::WhatAmI() const{
-return "Yoshi";
+return to_string(*crests_)+" crested Yoshi";
 };
